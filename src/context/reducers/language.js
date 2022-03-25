@@ -12,6 +12,7 @@ import {useReducer} from 'react';
 import TEXT from '../../../res/constants/languages';
 
 const initialLanguageState = {
+  currentLanguage: 'Default',
   text: TEXT.defaultLanguage,
 };
 
@@ -20,13 +21,13 @@ const reducer = (state, {type, payload}) => {
     case 'CHANGE_LANGUAGE': {
       let newLanguage = TEXT.defaultLanguage;
       switch (payload.language) {
-        case 'english':
+        case 'English':
           newLanguage = TEXT.english;
           break;
-        case 'russian':
+        case 'Russian':
           newLanguage = TEXT.russian;
           break;
-        case 'spanish':
+        case 'Spanish':
           newLanguage = TEXT.spanish;
           break;
         default:
@@ -35,6 +36,7 @@ const reducer = (state, {type, payload}) => {
       }
       return {
         ...state,
+        currentLanguage: payload.language,
         text: newLanguage,
       };
     }
@@ -44,4 +46,5 @@ const reducer = (state, {type, payload}) => {
   }
 };
 
-export const useLanguageReducer = () => useReducer(reducer, initialLanguageState);
+export const useLanguageReducer = () =>
+  useReducer(reducer, initialLanguageState);

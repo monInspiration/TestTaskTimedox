@@ -3,11 +3,9 @@
  * Author: Shian Alexei
  * Date: 27.09.21
  * Email: shian@triolcorp.com
- * 
+ *
  * Export of all Contexts
  */
 
- export * from './providers'
- export * from './actions'
- 
- 
+export * from './providers';
+export * from './actions';

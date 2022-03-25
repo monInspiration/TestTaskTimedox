@@ -12,6 +12,7 @@ export const english = require('../icons/language-eu.png');
 export const spanish = require('../icons/language-spain.png');
 export const day = require('../icons/icon-day.png');
 export const night = require('../icons/icon-night.png');
+export const done = require('../icons/icon-done.png');
 
 const ICONS = {
   russian,
@@ -19,6 +20,7 @@ const ICONS = {
   spanish,
   day,
   night,
+  done,
 };
 
 export default ICONS;
